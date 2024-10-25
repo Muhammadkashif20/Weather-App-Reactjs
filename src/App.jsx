@@ -8,23 +8,16 @@ function App() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-800 to-gray-900 text-white">
       <div className="w-full max-w-sm p-6 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg">
-        
-        {/* City Selector */}
+        {/* Select Your City */}
         <div className="text-center mb-6">
           <select
             className="bg-gray-700 p-2 rounded text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
           >
-            {cities.map((city, index) => (
-              <option key={index} value={city}>
-                {city}
-              </option>
-            ))}
+           
           </select>
         </div>
 
-        {/* Weather Overview */}
+        {/* Weather Overview*/}
         <div className="text-center space-y-2 mb-4">
           <div className="flex justify-center text-5xl text-yellow-300">
             <WiDayCloudy />
@@ -34,7 +27,7 @@ function App() {
           <p className="text-gray-400 text-sm">Feels like 30°C</p>
         </div>
 
-        {/* Weather Details */}
+        {/* Weather Details  Like Modern Feature's*/}
         <div className="grid grid-cols-2 gap-3 text-center text-xs">
           <div className="bg-gray-700 p-3 rounded hover:bg-gray-600 transition">
             <p className="font-semibold">Humidity</p>
