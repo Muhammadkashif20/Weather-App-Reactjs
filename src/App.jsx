@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaCloud, FaSun, FaTemperatureHigh, FaCompressArrowsAlt } from "react-icons/fa";
+import { FaCloud, FaWater , FaTemperatureHigh, FaCompressArrowsAlt } from "react-icons/fa";
 const popularPkCities = ["Karachi", "Lahore", "Islamabad", "Rawalpindi", "Faisalabad", "Peshawar", "Quetta"];
 function App() {
   const [selectedCity,SetselectedCity]=useState(popularPkCities[0])// multiple value select ai nahi asakti hai islye [0] index number 0 dy ahai take value 1 hi aye.
@@ -29,8 +29,10 @@ function App() {
       console.log('weatherData=>',weatherData);
       // const temp =Math.round(weatherData?.main?.temp-273.15)
       // const temp = Math.round((weatherData?.main?.temp - 273.15))
-      const temp=weatherData?.main?.temp -273.15
-
+      const temp=Math.round(weatherData?.main?.temp -273.15)
+      const humidity=Math.round(weatherData?.main?.humidity)
+      const clouds=Math.round(weatherData?.main?.clouds -273.15)
+      const pressure=Math.round(weatherData?.main?.pressure -273.15)
       
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-500 flex justify-center items-center">
@@ -58,19 +60,19 @@ function App() {
             <p className="text-lg">{temp}</p>
           </div>
           <div className="flex justify-between items-center p-4 bg-gray-100 rounded-lg border border-purple-300">
-            <FaSun className="text-yellow-500" />
-            <p className="text-purple-600 font-medium">Condition</p>
-            <p className="text-lg">{}</p>
+            <FaWater  className="text-yellow-500" />
+            <p className="text-purple-600 font-medium">Humidity</p>
+            <p className="text-lg">{humidity}</p>
           </div>
           <div className="flex justify-between items-center p-4 bg-gray-100 rounded-lg border border-purple-300">
             <FaCloud className="text-gray-500" />
             <p className="text-purple-600 font-medium">Clouds</p>
-            <p className="text-lg">{}</p>
+            <p className="text-lg">{clouds}</p>
           </div>
           <div className="flex justify-between items-center p-4 bg-gray-100 rounded-lg border border-purple-300">
             <FaCompressArrowsAlt className="text-blue-500" />
             <p className="text-purple-600 font-medium">Pressure</p>
-            <p className="text-lg">{}</p>
+            <p className="text-lg">{pressure}</p>
           </div>
         </div>
       </div>
