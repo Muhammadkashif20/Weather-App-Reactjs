@@ -86,7 +86,7 @@ import { WiDayCloudy } from 'react-icons/wi'; // Using react-icons for a placeho
 
 function App() {
   const [city, setCity] = useState("Karachi");
-  const cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+  const cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar","Multan","Rawalpindi","Kashmir"];
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-800 to-gray-900 text-white">
