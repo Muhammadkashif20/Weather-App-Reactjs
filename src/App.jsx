@@ -29,7 +29,11 @@ function App() {
         setWeatherData(res);
       });
   }, [choseCity]);
-const humidity=weatherData?.main?.humidity
+const humidity=Math.round(weatherData?.main?.humidity)
+const weather=weatherData?.weather[0]?.main
+const temp=Math.round(weatherData?.main?.temp-273.15)
+const feels_like=Math.round(weatherData?.main?.feels_like-273.15)
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-800 to-gray-900 text-white">
       <div className="w-full max-w-sm p-6 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg">
@@ -49,8 +53,8 @@ const humidity=weatherData?.main?.humidity
             })}
           </select>
         </div>
-        <WeatherOverView />
-        <WeatherDetails />
+        <WeatherOverView feels_like={feels_like} weather={weather} temp={temp}/>
+        <WeatherDetails humidity={humidity}/>
       </div>
     </div>
   );

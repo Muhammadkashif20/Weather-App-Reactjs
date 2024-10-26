@@ -1,17 +1,17 @@
 {/* Weather Details  Like Modern Feature's Page*/}
 import React from 'react'
 
-const WeatherDetails = () => {
+const WeatherDetails = ({humidity}) => {
   return (
     <div>
        <div className="grid grid-cols-2 gap-3 text-center text-xs">
           <div className="bg-gray-700 p-3 rounded hover:bg-gray-600 transition">
             <p className="font-semibold">Humidity</p>
-            <p className="text-lg">60%</p>
+            <p className="text-lg">{humidity}<sup>o</sup></p>
           </div>
           <div className="bg-gray-700 p-3 rounded hover:bg-gray-600 transition">
-            <p className="font-semibold">Cloudiness</p>
-            <p className="text-lg">40%</p>
+            <p className="font-semibold">Weather</p>
+            <p className="text-lg"></p>
           </div>
           <div className="bg-gray-700 p-3 rounded hover:bg-gray-600 transition">
             <p className="font-semibold">Sunrise</p>
