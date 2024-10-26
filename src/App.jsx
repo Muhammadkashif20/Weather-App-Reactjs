@@ -1,42 +1,7 @@
   import React, { useEffect, useState } from "react";
   import WeatherOverView from "./Components/WeatherOverView";
   import WeatherDetails from "./WeatherDetails";
-  const Allcities = [
-    // "Karachi",
-    // "Lahore",
-    // "Islamabad",
-    // "Quetta",
-    // "Peshawar",
-    // "Multan",
-    // "Rawalpindi",
-    'pakistan',
-    "New York",
-    "London",
-    "Tokyo",
-    "Paris",
-    "Sydney",
-    "Dubai",
-    "Toronto",
-    "Los Angeles",
-    "Berlin",
-    "Moscow",
-    "Istanbul",
-    "Singapore",
-    "Hong Kong",
-    "Madrid",
-    "Barcelona",
-    "Rome",
-    "Bangkok",
-    "San Francisco",
-    "Seoul",
-    "Buenos Aires",
-    "Cairo",
-    "Amsterdam",
-    "Lisbon",
-    "Mumbai",
-    "Kuala Lumpur",
-    "Jakarta",
-  ];
+  const Allcities = ['pakistan',"New York","Los Angeles","London","Paris","Tokyo","Dubai","Sydney","Toronto","Moscow","Mumbai","Hong Kong","Seoul","Rome","Istanbul","Barcelona", "Singapore",];
   const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   function App() {
     const [choseCity, setChoseCity] = useState(Allcities[0]);
